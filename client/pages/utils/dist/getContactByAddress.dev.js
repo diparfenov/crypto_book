@@ -31,29 +31,28 @@ var getcontactbyaddress = function getcontactbyaddress(address) {
           throw new Error("Такой контакт не найден!");
 
         case 5:
-          console.log("contactAddress:", contactAddress);
-          n; //обращаеаемся к контракту типа Contact, передав туда полученный адресс
+          console.log("contactAddress:", contactAddress); //обращаеаемся к контракту типа Contact, передав туда полученный адресс
 
           usercontact = (0, _contact["default"])(contactAddress); //достаем оттуда значение телегерам
 
-          _context.next = 10;
+          _context.next = 9;
           return regeneratorRuntime.awrap(usercontact.telegram());
 
-        case 10:
+        case 9:
           telegram = _context.sent;
           console.log("telegram :", telegram); //достаем оттуда значение дискорд
 
-          _context.next = 14;
+          _context.next = 13;
           return regeneratorRuntime.awrap(usercontact.discord());
 
-        case 14:
+        case 13:
           discord = _context.sent;
           console.log("discord :", discord); //достаем оттуда значение деск
 
-          _context.next = 18;
+          _context.next = 17;
           return regeneratorRuntime.awrap(usercontact.desc());
 
-        case 18:
+        case 17:
           desc = _context.sent;
           console.log("desc :", desc); //возвращаем значения 
 
@@ -63,7 +62,7 @@ var getcontactbyaddress = function getcontactbyaddress(address) {
             desc: desc
           });
 
-        case 21:
+        case 20:
         case "end":
           return _context.stop();
       }

@@ -10,7 +10,7 @@ const getcontactbyaddress= async (address) => {
         //выбросить новую ошибку и выполнение функции прервется
         throw new Error("Такой контакт не найден!")
     }
-    console.log("contactAddress:", contactAddress);n
+    console.log("contactAddress:", contactAddress);
 
     //обращаеаемся к контракту типа Contact, передав туда полученный адресс
     const usercontact = contact(contactAddress);
