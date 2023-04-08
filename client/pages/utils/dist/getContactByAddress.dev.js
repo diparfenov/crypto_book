@@ -5,6 +5,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var _Contact = _interopRequireDefault(require("../../Contact"));
+
+var _contactFactory = _interopRequireDefault(require("../../contactFactory"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 var getContactByAddress = function getContactByAddress(address) {
   var contactAddress, contact, telegram, discord, desc;
   return regeneratorRuntime.async(function getContactByAddress$(_context) {
@@ -12,7 +18,7 @@ var getContactByAddress = function getContactByAddress(address) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return regeneratorRuntime.awrap(contactFactory.ownerToContact(address));
+          return regeneratorRuntime.awrap(_contactFactory["default"].ownerToContact(address));
 
         case 2:
           contactAddress = _context.sent;
@@ -28,7 +34,7 @@ var getContactByAddress = function getContactByAddress(address) {
           console.log("contactAddress:", contactAddress);
           n; //обращаеаемся к контракту типа Contact, передав туда полученный адресс
 
-          contact = Contact(contactAddress); //достаем оттуда значение телегерам
+          contact = (0, _Contact["default"])(contactAddress); //достаем оттуда значение телегерам
 
           _context.next = 10;
           return regeneratorRuntime.awrap(contact.telegram());
