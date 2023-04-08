@@ -1,5 +1,5 @@
 
-const getContactByAddress = async (address) => {
+const getContactByAddress= async (address) => {
     //пробуем обратиться к мэпингу контракта contactFactory, чтобы узнать адрес
     //контракта Contact, в аргументе указав EOA address, который прописываем в input
     const contactAddress = await contactFactory.ownerToContact(address);
