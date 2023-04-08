@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
 import { Form, Button, Message } from "semantic-ui-react";
 import { useRef, useState } from "react";
-import getContactByAddress from "./utils/getContactByAddress";
+import getcontactbyaddress from "./utils/getcontactbyaddress";
+
 
 const ShowContact = () => {
     //стейт для отслеживания ошибки
@@ -38,7 +39,7 @@ const ShowContact = () => {
         //достаем данные из контракта Contact по адресу EOA
         //- используем try-catch т.к. жто делается через await
         try {
-            const contact = await getContactByAddress(address);
+            const contact = await getcontactbyaddress(address);
             //меняем стейт
             setTelegram(contact.telegram)
             setDiscord(contact.discord)

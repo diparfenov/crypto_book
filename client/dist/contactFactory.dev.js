@@ -57,6 +57,6 @@ var abi = [{
 
 var ethAbi = ["function ownerToContact(address) public view returns (address)", "function createContact(string, string) public", "function createContact(string) public"]; //обращамся к контракту contactFactory
 
-var contactFactory = new _ethers.ethers.Contract(address, abi, _provider["default"]);
-var _default = contactFactory;
+var contactfactory = new _ethers.ethers.Contract(address, abi, _provider["default"]);
+var _default = contactfactory;
 exports["default"] = _default;

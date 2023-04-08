@@ -12,7 +12,7 @@ const Index = () => {
                 Здесь вы можете посмотреть контакты по адресу или оставить свои.
             </h1>
             <Button.Group>
-                <Button primiry onClick={() => router.push("/show")}>Посмотреть</Button>
+                <Button primary onClick={() => router.push("/show")}>Посмотреть</Button>
                 <Button.Or text="||"/>
                 <Button positive onClick={() => router.push("/add")} >Записать</Button>
             </Button.Group>

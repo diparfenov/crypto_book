@@ -100,9 +100,9 @@ var contactAbi = [{
   type: "function"
 }]; //обращамся к контракту Сontact принимая в аргумент адресс такого контракта, потому что их может быть много
 
-var Contact = function Contact(address) {
+var contact = function contact(address) {
   return new _ethers.ethers.Contract(address, contactAbi, _provider["default"]);
 };
 
-var _default = Contact;
+var _default = contact;
 exports["default"] = _default;

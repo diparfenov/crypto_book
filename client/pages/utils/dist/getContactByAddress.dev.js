@@ -5,20 +5,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _Contact = _interopRequireDefault(require("../../Contact"));
+var _contact = _interopRequireDefault(require("../../contact"));
 
-var _contactFactory = _interopRequireDefault(require("../../contactFactory"));
+var _contactfactory = _interopRequireDefault(require("../../contactfactory"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var getContactByAddress = function getContactByAddress(address) {
-  var contactAddress, contact, telegram, discord, desc;
-  return regeneratorRuntime.async(function getContactByAddress$(_context) {
+var getcontactbyaddress = function getcontactbyaddress(address) {
+  var contactAddress, usercontact, telegram, discord, desc;
+  return regeneratorRuntime.async(function getcontactbyaddress$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return regeneratorRuntime.awrap(_contactFactory["default"].ownerToContact(address));
+          return regeneratorRuntime.awrap(_contactfactory["default"].ownerToContact(address));
 
         case 2:
           contactAddress = _context.sent;
@@ -34,24 +34,24 @@ var getContactByAddress = function getContactByAddress(address) {
           console.log("contactAddress:", contactAddress);
           n; //обращаеаемся к контракту типа Contact, передав туда полученный адресс
 
-          contact = (0, _Contact["default"])(contactAddress); //достаем оттуда значение телегерам
+          usercontact = (0, _contact["default"])(contactAddress); //достаем оттуда значение телегерам
 
           _context.next = 10;
-          return regeneratorRuntime.awrap(contact.telegram());
+          return regeneratorRuntime.awrap(usercontact.telegram());
 
         case 10:
           telegram = _context.sent;
           console.log("telegram :", telegram); //достаем оттуда значение дискорд
 
           _context.next = 14;
-          return regeneratorRuntime.awrap(contact.discord());
+          return regeneratorRuntime.awrap(usercontact.discord());
 
         case 14:
           discord = _context.sent;
           console.log("discord :", discord); //достаем оттуда значение деск
 
           _context.next = 18;
-          return regeneratorRuntime.awrap(contact.desc());
+          return regeneratorRuntime.awrap(usercontact.desc());
 
         case 18:
           desc = _context.sent;
@@ -71,5 +71,5 @@ var getContactByAddress = function getContactByAddress(address) {
   });
 };
 
-var _default = getContactByAddress;
+var _default = getcontactbyaddress;
 exports["default"] = _default;

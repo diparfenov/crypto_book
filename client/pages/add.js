@@ -2,7 +2,7 @@ import { Form, Button, Input, Message } from "semantic-ui-react";
 import Layout from "../components/Layout";
 import { useState } from "react";
 import provider from "../provider";
-import contactFactory from "../contactFactory";
+import contactFactory from "../contactfactory";
 
 const AddContact = () => {
     const [telegram, setTelegram] = useState("");
