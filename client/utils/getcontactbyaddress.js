@@ -1,5 +1,5 @@
-import contact from "../../contact";
-import contactfactory from "../../contactfactory";
+import contact from "../contact";
+import contactfactory from "../contactfactory";
 
 const getcontactbyaddress= async (address) => {
     //пробуем обратиться к мэпингу контракта contactFactory, чтобы узнать адрес
