@@ -30,4 +30,4 @@ const getcontactbyaddress= async (address) => {
     //возвращаем значения 
     return { telegram, discord, desc }
 };
-export default getcontactbyaddress
+export default getcontactbyaddress;

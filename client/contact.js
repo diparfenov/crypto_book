@@ -119,4 +119,4 @@ const contactAbi = [
 
 //обращамся к контракту Сontact принимая в аргумент адресс такого контракта, потому что их может быть много
 const contact = (address) => new ethers.Contract(address, contactAbi, provider);
-export default contact
+export default contact;

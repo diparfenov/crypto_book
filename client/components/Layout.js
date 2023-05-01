@@ -7,4 +7,4 @@ const Layout = ({children}) => {
     return (<Container><Header/>{children}</Container>);
 }
 
-export default Layout ;
+export default Layout;

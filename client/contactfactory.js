@@ -69,4 +69,4 @@ const ethAbi = [
 //обращамся к контракту contactFactory
 const contactfactory = new ethers.Contract(address, abi, provider);
 
-export default contactfactory
+export default contactfactory;
