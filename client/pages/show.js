@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
 import { Form, Button, Message } from "semantic-ui-react";
 import { useRef, useState } from "react";
-import getcontactbyaddress from "./utils/getcontactbyaddress";
+import getcontactbyaddress from "../utils/getcontactbyaddress";
+
 
 
 const ShowContact = () => {
