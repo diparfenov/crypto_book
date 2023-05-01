@@ -8,7 +8,7 @@ const getcontactbyaddress= async (address) => {
     //если по такому адресу EOA нет записей, то выводим ошибку
     if(contactAddress === "0x0000000000000000000000000000000000000000") {
         //выбросить новую ошибку и выполнение функции прервется
-        throw new Error("Такой контакт не найден!")
+        throw new Error("Такой контакт не найден!");
     }
     console.log("contactAddress:", contactAddress);
 
